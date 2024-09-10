@@ -1,0 +1,109 @@
+'Aula de ALGORITIMO: AUlA 31/08/2023
+
+Manipulação de String
+
+COMPR(s) = retorna A QUANTIDADE DE CARACTERES na string;
+
+COPIA(s) = guarda e mostra a quantidade que você quer; EX: S<-Louco // COPIA(S,2,3) = OUC;
+
+ASC(s) = REFERENTE a Tabela ASC - Retorna o Numemo. EX: ASC("A") = 65;
+
+CARAC(s) = REFERENTE a Tabela ASC - Retorna o Caractere EX: CARAC(065) = A;
+
+CARACPNUM(s) = Muda a String para numero;
+
+NUMPCARAC(s) = Muda Numero para String; 
+
+MAIUSC(s) = Mostra a String toda em Maisucula
+
+MINUSC(s) = Mostra toda a String em Minuscula
+
+
+
+Construa um algoritmo que solicite uma frase (mínimo 10 caracteres) e posteriormente apresente:
+
+1- A quantidade de caracteres da frase
+2- A frase toda em maiúsculo 
+3- A frase toda em minúsculo 
+4- A frase intercalada com caractere maiúsculo e minúsculo
+  exemplo: "FORTALEZA DIGITAL" -> "FoRtAlEzA DiGiTaL"
+5- A quantidade de vogais
+6- A quantidade de consoantes maiúsculas
+7- A quantidade de espaços
+8- A soma do valor ASCII de todos os caracteres da frase
+9- O caractere da frase com o maior valor ASCII
+10- A frase ao contrário
+    (exemplo: "FORTALEZA DIGITAL" -> "LATIGID AZELATROF"
+11- Se a frase é ou nao um palíndromo.
+
+
+AULA DIA 21/09/2023
+
+Tipos de variavel(Tipos de Dados):
+-Inteiro
+-Real
+-Caractere
+-Logico
+
+Operadores:
+*Aritimetico
+-Multiplicação,Divisao,adição e Subtração
+
+*Logicos:
+-E, OU , NÃO
+
+*Relacionais
+- >=, <=, > , <, =, <>
+
+Comandos:
+-Leia
+-Escreva/Escreval
+
+Estrutura:
+-Simples (Se/Entao)
+-Composto (Se/Entao/Senao)
+-Aninhado(Se/Entao/Se/Entao/Senao...)
+-Multipla Escolha (Escolha/Caso)
+
+Laços de Repetição
+-Para
+-Repita/Ate
+-Enquanto/Faca  
+
+
+Linguagem C:
+-FFLUSH(STDIN);
+-gets(Nome) -- Somente Sring com "Espaço".Ex: Nomes, Endereço.
+
+Operador:
+*Relaciona:
+- == Comparação, Igualadade
+- = Atribuição
+- != Diferente
+
+*Logico
+- && AND ou E
+- || OR ou OU
+
+
+https://dontpad.com/moreno/241123
+## CONTEÚDO DA PROVA ##
+- Manipulação de strings (compr, copia, asc, carac, caracpnum, numpcarac)
+- Estruturas homogêneas
+  - Vetores
+  - Matrizes
+- Sub-rotinas:
+  - Procedimentos
+  - Funções iterativas
+  - Funções recursivas
+- Parâmetros
+  - Parâmetros formais
+  - Parâmetros reais
+  - Passagem de parâmetros por valor
+  - Passagem de parâmetros por referência
+- Métodos de busca
+  - Busca sequencial
+  - Busca binária
+- Métodos de classificação 
+  - selection sort 
+  - bubble sort
