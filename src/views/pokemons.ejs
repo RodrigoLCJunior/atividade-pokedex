@@ -4,26 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Pokémon</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            overflow: auto; /* Permite rolagem se necessário */
+        }
+
+        /* Container principal */
+        .container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            overflow: auto; /* Permite rolagem interna se necessário */
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 2.5rem;
+            color: #ffcb05;
+            margin-bottom: 20px;
+        }
+
+        /* Imagem do Pokémon */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo dos parágrafos */
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Títulos secundários */
+        h3, h4 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        /* Lista de habilidades, tipos e movimentos */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #f1f3f5;
+            margin: 5px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        /* Link de voltar */
+        a {
+            display: inline-block;
+            font-size: 1.2rem;
+            color: #007bff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    
-    <h1>Detalhes do Pokémon: <%= name %></h1>
-    <img src="<%= pokemon.sprites.front_default %>" alt="<%= name %>" >
-    <p>ID: <%= pokemon.id %></p>
-    <p>Altura: <%= pokemon.height %></p>
-    <p>Peso: <%= pokemon.weight %></p>
-    <h3>Habilidades</h3>
+    <div class="container">
+        <h1>Detalhes do Pokémon: <%= name %></h1>
+        <img src="<%= pokemon.sprites.front_default %>" alt="<%= name %>">
+        <p>ID: <%= pokemon.id %></p>
+        <p>Altura: <%= pokemon.height %></p>
+        <p>Peso: <%= pokemon.weight %></p>
+        <h3>Habilidades</h3>
         <ul>
             <% pokemon.abilities.forEach(ability => { %>
                 <li><%= ability.ability.name %></li>
             <% }) %>
         </ul>
-    <h4>Tipo</h4>    
+        <h4>Tipo</h4>    
         <ul>
             <% pokemon.types.forEach(type => { %>
                 <li><%= type.type.name %></li>
             <% }) %>
         </ul>
+        <h4>Movimentos</h4>
+        <ul>
+            <% pokemon.moves.forEach(move => { %>
+                <li><%= move.move.name %></li>
+            <% }) %>
+        </ul>
         <a href="/">Voltar para a lista</a>
+    </div>
 </body>
 </html>
